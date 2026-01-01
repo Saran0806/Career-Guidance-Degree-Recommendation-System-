@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 /* PAGES */
 import Home from "./pages/Home";
 import Career from "./pages/Career";
-import Prepare from "./pages/Prepare";
+import Prepare from "./Pages/Prepare";
 import Colleges from "./pages/Colleges";
 import About from "./pages/About";
 import Login from "./pages/Login";
