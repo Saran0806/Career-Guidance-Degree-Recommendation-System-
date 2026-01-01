@@ -5,7 +5,7 @@ import Home from "./pages/Home";
 import Career from "./pages/Career";
 import Prepare from "./pages/Prepare";
 import Colleges from "./pages/Colleges";
-import About from "./Pages/About1";
+import About from "./pages/About";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import CareerSummary from "./pages/CareerSummary";
