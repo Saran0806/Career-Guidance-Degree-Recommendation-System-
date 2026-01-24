@@ -61,7 +61,9 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
-
+CORS_ALLOWED_ORIGINS = [
+    "https://your-frontend.netlify.app"
+]
 
 # --------------------------------------------------
 # URLS / WSGI
@@ -95,11 +97,13 @@ TEMPLATES = [
 # DATABASE
 # --------------------------------------------------
 
+import os
+import dj_database_url
+
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
-    }
+    'default': dj_database_url.config(
+        default=os.environ.get("DATABASE_URL")
+    )
 }
 
 
@@ -131,6 +135,8 @@ USE_TZ = True
 
 STATIC_URL = "static/"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+STATIC_ROOT = BASE_DIR / "staticfiles"
+
 
 
 # --------------------------------------------------
@@ -163,4 +169,7 @@ SIMPLE_JWT = {
 }
 
 
+DEBUG = False
+
+ALLOWED_HOSTS = ["career-backend.onrender.com"]
 
